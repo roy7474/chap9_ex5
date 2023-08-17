@@ -21,6 +21,7 @@ for line in fhand:
             emails[domain] = 1
         else:
          emails[domain] += 1
-print(emails)
+for key, value in emails.items():
+   print(f'{key}: {value}')
 
     
