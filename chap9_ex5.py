@@ -6,9 +6,15 @@ Enter a file name: mbox-short.txt
 {'media.berkeley.edu': 4, 'uct.ac.za': 6, 'umich.edu': 7,
 'gmail.com': 1, 'caret.cam.ac.uk': 1, 'iupui.edu': 8}'''
 
-fhand = open('mbox-short.txt')
-
+file_name = input('Enter the name of the file: ')
 emails = {}
+try:
+   fhand = open(file_name)
+
+except:
+   print('There was an error opening your file. Please try again')
+   quit()
+
 
 for line in fhand:
     words = line.split()
